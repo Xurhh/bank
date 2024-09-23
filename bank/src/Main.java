@@ -1,10 +1,4 @@
-import static java.lang.System.setOut;
-
-import java.io.*;
 import java.util.*;
-
-
-
 public class Main {
     public static void main(String[] args) {
         int  a = 0;
@@ -13,7 +7,7 @@ public class Main {
 
         while(a!=-1){
             System.out.println("please enter the number that you want to be serverd;");
-            System.out.println("1:createaccount  2:logging account  3:delete account");
+            System.out.println("1:createaccount  2:logging account  3:delete account  -1:end");
             a = reader.nextInt();
             reader.nextLine();
         switch(a){
@@ -112,6 +106,8 @@ public class Main {
                     swap(maindata.userdata[j],maindata.userdata[maindata.length-1]);
                     maindata.length-=1;
                 }
+                break;
+            case -1:
                 break;
             default:
                 System.out.println("please check your number");
